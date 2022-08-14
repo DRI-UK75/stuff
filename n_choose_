@@ -1,0 +1,33 @@
+#Calculate possible combinations
+#N Choose R
+
+#C(n,r) = n! / r! (n – r)!
+
+import math
+
+n = 4
+r = 0
+
+nCr = math.factorial(n) / math.factorial(r) * math.factorial((n - r))
+
+print(nCr)
+
+
+#Node for making calculation
+
+set cut_paste_input [stack 0]
+version 12.2 v9
+push $cut_paste_input
+NoOp {
+name nCr
+selected true
+xpos 83103
+ypos 9564
+addUserKnob {20 User}
+addUserKnob {26 result l "n Choose r"}
+addUserKnob {26 "" +STARTLINE}
+addUserKnob {3 n}
+addUserKnob {3 r}
+addUserKnob {26 "" +STARTLINE}
+addUserKnob {52 nCr l "n Choose r" T "#Calculate possible combinations\n#N Choose R\n\n#nCr = n! / r! (n – r)!\n\nimport math\n\nn = 5\nr = 3\n\nnCr = math.factorial(n) / math.factorial(r) * math.factorial((n - r))\n\nprint(nCr)" +STARTLINE}
+}
